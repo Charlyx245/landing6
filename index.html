@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ducky</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/PATO.png" type="image/x-icon">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+        }
+
+        .logo {
+            margin-top: 20px;
+        }
+
+        .logo img {
+            max-width: 250px;
+            height: auto;
+        }
+
+        .main-title {
+            margin-top: 30px;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 32px;
+            line-height: 1.2;
+        }
+
+        .whatsapp {
+            margin: 30px 0;
+        }
+
+        .button {
+            background-color: #25d366;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .button img {
+            height: 30px;
+            width: 30px;
+        }
+
+        .button:hover {
+            background-color: #1ebe57;
+        }
+
+        .info {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .info h3 {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 1.5;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="./img/LOGO COMPLETO .png" alt="RedBlackLine">
+    </div>
+
+    <div class="main-title">
+        <p>Envianos un Whatsapp</p>
+        <p>Para crear tu cuenta</p>
+    </div>
+
+    <div class="whatsapp">
+        <button class="button" id="whatsappButton">
+            Crea tu usuario
+            <img src="./img/whatsapp-64.png" alt="Whatsapp">
+        </button>
+    </div>
+
+    <div class="info">
+        <p>Mínimo de carga: $2000</p>
+        <h3>
+            SEGURIDAD EN CADA JUGADA <br>
+            ATENCIÓN INMEDIATA <br>
+            Y MUCHO MÁS
+        </h3>
+    </div>
+
+    <script>
+        document.getElementById("whatsappButton").addEventListener("click", function() {
+            var telefono = "5493513903461";
+            var mensaje = "Hola! Vi este anuncio, quisiera un nuevo usuario.";
+            var link = "https://wa.me/" + telefono + "?text=" + encodeURIComponent(mensaje);
+            window.open(link, '_blank');
+        });
+    </script>
+</body>
+</html>
